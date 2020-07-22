@@ -43,7 +43,7 @@ export default function Article(props) {
   const [article, setArticle] = React.useState();
 
   React.useEffect(() => {
-    const apiUrl = `http://localhost:8080/articles/${articleID}`;
+    const apiUrl = `/articles/${articleID}`;
     fetch(apiUrl)
       .then((res) => res.json())
       .then((res) => {

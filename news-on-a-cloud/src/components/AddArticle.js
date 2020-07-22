@@ -44,7 +44,7 @@ export default function AddArticle() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
     };
-    fetch('http://localhost:8080/articles', requestOptions)
+    fetch('/articles', requestOptions)
         .then(response => response.json())
         .then(data => {
           console.log(data);
@@ -58,7 +58,7 @@ export default function AddArticle() {
   };
 
   React.useEffect(() => {
-    const apiUrl = `http://localhost:8080/category`;
+    const apiUrl = `/category`;
     fetch(apiUrl)
       .then((res) => res.json())
       .then((res) => {

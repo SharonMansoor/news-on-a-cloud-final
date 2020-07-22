@@ -24,7 +24,7 @@ export default function AddCategory(props) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({name: categoryName})
     };
-    fetch('http://localhost:8080/category', requestOptions)
+    fetch('/category', requestOptions)
         .then(response => response.json())
         .then(data => console.log(data));
     props.handleCategoryAdded();

@@ -25,7 +25,7 @@ export default function NewsPreview() {
 
   React.useEffect(() => {
     setAppState({ loading: true });
-    const apiUrl = `http://localhost:8080/articles`;
+    const apiUrl = `/articles`;
     fetch(apiUrl)
       .then((res) => res.json())
       .then((res) => {
